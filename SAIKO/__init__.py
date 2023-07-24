@@ -12,7 +12,26 @@ VOICE_LIBRARY = {
     },
     'cos' : {
         1.0:1.0+0.0j
+    },
+    'ding' : {
+        1.0:0.5+0.0j,
+        2.0:0.2+0.0j,
+        4.0:0.1+0.0j,
+        8.0:0.2+0.0j
+    },
+    'piano' : {
+        1.0:0.4+0.0j,
+        2.0:0.3+0.0j,
+        4.0:0.2+0.0j,
+        8.0:0.1+0.0j
+    },
+    'GT1' : {
+        0.5:0.1+0.0j,
+        1.0:0.8+0.0j,
+        2.0:0.1+0.0j,
+        4.0:0.0+0.0j
     }
+    
 }
 
 from . import VOICE,ENVELOP,OUTPUT,pitch
@@ -23,8 +42,8 @@ def synthesis(score:dict)->list[int]:
     
     # Get Global Voice
     useVoice = score.get('use voice',None)
-    if useVoice == None:
-        print('Cannot find Use VOice')
+    if useVoice == None :
+        print('Cannot find Use Voice')
         useVoice = VOICE_LIBRARY['sin']
     # Get Score (list)
     useScore = score.get('score')
@@ -67,7 +86,6 @@ def synthesis(score:dict)->list[int]:
             delay = 1
         
         # Start Magic
-        tmp = Voice
         track += VOICE.VOICE(
             Voice,freq,delay*useBeat,vol,ENVELOP.ENVELOP['test1']
         )
@@ -77,8 +95,6 @@ def synthesis(score:dict)->list[int]:
         print('\rSynthesis',end=' |')
         print('#'*p,end='')
         print('_'*(100-p)+'|',i,'/',len(useScore),end='   ')
-        
+    print()
     return track,len(useScore)
 
-
-        

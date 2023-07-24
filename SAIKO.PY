@@ -25,16 +25,44 @@ try:
         SCORE = json.load(f)
     
     TEMP_TRACK = []
+    SIZE = 0
     
     t1 = time.perf_counter_ns()
+    i = 1
+    for score in SCORE:
+        print(i,'/',len(SCORE))
+        TEMP_TRACK,size=SAIKO.synthesis(score=score)
+        GLOBAL_TRACK.append(TEMP_TRACK)
+        SIZE += size
+        i += 1
+        
     
-    TEMP_TRACK,size=SAIKO.synthesis(SCORE)
+    tmp = []
+    for t in GLOBAL_TRACK:
+        tmp.append( len(t) )
     
-    GLOBAL_TRACK.append(
-        TEMP_TRACK
-    )
+    max_size = max(tmp)
+    
+    del tmp
+    
+    WRITE_TRACK = [0]*max_size
     
     t2 = time.perf_counter_ns()
+    
+    print('Waiting to remix...')
+    
+    for t in GLOBAL_TRACK:
+        for i in range(len(t)):
+            WRITE_TRACK[i] += t[i]
+    
+    for i in range(len(WRITE_TRACK)):
+        if WRITE_TRACK[i] > 32767:
+            WRITE_TRACK[i] = 32767
+        if WRITE_TRACK[i] < -32767:
+            WRITE_TRACK[i] = -32767
+        
+    
+    
     
     print()
     
@@ -43,7 +71,7 @@ try:
     
     print('Overwriting...')
     SAIKO.OUTPUT.OUTPUT(
-        file_name=file_name+'.wav',w=GLOBAL_TRACK[0]
+        file_name=file_name+'.wav',w=WRITE_TRACK
     )
     
     
