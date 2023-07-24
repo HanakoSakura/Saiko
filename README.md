@@ -4,3 +4,10 @@
 Inverse Discrete Fourier Transform
 
 Almost completely solve the noise problem, Perfect.
+
+Sample:
+```
+./SAIKO.PY SampleScore/kokoronashi
+```
+
+Recently, adding sound track is supported.
