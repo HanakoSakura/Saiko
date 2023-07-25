@@ -19,6 +19,40 @@
             {"beat":4,"pitch":"D4"},
             {"beat":8,"pitch":"C4"},
 
+
+            {"beat":4,"pitch":"G4"},
+            {"beat":4,"pitch":"G4"},
+            {"beat":4,"pitch":"F4"},
+            {"beat":4,"pitch":"F4"},
+            {"beat":4,"pitch":"E4"},
+            {"beat":4,"pitch":"E4"},
+            {"beat":8,"pitch":"D4"},
+
+            {"beat":4,"pitch":"G4"},
+            {"beat":4,"pitch":"G4"},
+            {"beat":4,"pitch":"F4"},
+            {"beat":4,"pitch":"F4"},
+            {"beat":4,"pitch":"E4"},
+            {"beat":4,"pitch":"E4"},
+            {"beat":8,"pitch":"D4"},
+
+            
+            {"beat":4,"pitch":"C4"},
+            {"beat":4,"pitch":"C4"},
+            {"beat":4,"pitch":"G4"},
+            {"beat":4,"pitch":"G4"},
+            {"beat":4,"pitch":"A5"},
+            {"beat":4,"pitch":"A5"},
+            {"beat":8,"pitch":"G4"},
+
+            {"beat":4,"pitch":"F4"},
+            {"beat":4,"pitch":"F4"},
+            {"beat":4,"pitch":"E4"},
+            {"beat":4,"pitch":"E4"},
+            {"beat":4,"pitch":"D4"},
+            {"beat":4,"pitch":"D4"},
+            {"beat":8,"pitch":"C4"},
+
             {"beat":8,"pitch":"C4"}
         ]
     },
@@ -27,6 +61,90 @@
         "beat":9600,
         "score":[
             {"beat":2,"pitch":"C3"},
+            {"beat":2,"pitch":"G3"},
+            {"beat":2,"pitch":"E3"},
+            {"beat":2,"pitch":"G3"},
+            
+            {"beat":2,"pitch":"C3"},
+            {"beat":2,"pitch":"G3"},
+            {"beat":2,"pitch":"E3"},
+            {"beat":2,"pitch":"G3"},
+            
+            {"beat":2,"pitch":"C3"},
+            {"beat":2,"pitch":"A4"},
+            {"beat":2,"pitch":"F3"},
+            {"beat":2,"pitch":"A4"},
+            
+            {"beat":2,"pitch":"C3"},
+            {"beat":2,"pitch":"G3"},
+            {"beat":2,"pitch":"E3"},
+            {"beat":2,"pitch":"G3"},
+
+
+            {"beat":2,"pitch":"B3"},
+            {"beat":2,"pitch":"G3"},
+            {"beat":2,"pitch":"D3"},
+            {"beat":2,"pitch":"G3"},
+            
+            {"beat":2,"pitch":"C3"},
+            {"beat":2,"pitch":"G3"},
+            {"beat":2,"pitch":"E3"},
+            {"beat":2,"pitch":"G3"},
+            
+            {"beat":2,"pitch":"B3"},
+            {"beat":2,"pitch":"G4"},
+            {"beat":2,"pitch":"D3"},
+            {"beat":2,"pitch":"G4"},
+            
+            {"beat":2,"pitch":"C3"},
+            {"beat":2,"pitch":"G3"},
+            {"beat":2,"pitch":"E3"},
+            {"beat":2,"pitch":"G3"},
+
+
+            {"beat":2,"pitch":"C3"},
+            {"beat":2,"pitch":"G3"},
+            {"beat":2,"pitch":"E3"},
+            {"beat":2,"pitch":"G3"},
+
+            {"beat":2,"pitch":"B3"},
+            {"beat":2,"pitch":"G3"},
+            {"beat":2,"pitch":"D3"},
+            {"beat":2,"pitch":"G3"},
+            
+            {"beat":2,"pitch":"C3"},
+            {"beat":2,"pitch":"G3"},
+            {"beat":2,"pitch":"E3"},
+            {"beat":2,"pitch":"G3"},
+            
+            {"beat":2,"pitch":"B3"},
+            {"beat":2,"pitch":"G4"},
+            {"beat":2,"pitch":"D3"},
+            {"beat":2,"pitch":"G4"},
+
+
+            {"beat":2,"pitch":"C3"},
+            {"beat":2,"pitch":"G3"},
+            {"beat":2,"pitch":"E3"},
+            {"beat":2,"pitch":"G3"},
+
+            {"beat":2,"pitch":"B3"},
+            {"beat":2,"pitch":"G3"},
+            {"beat":2,"pitch":"D3"},
+            {"beat":2,"pitch":"G3"},
+            
+            {"beat":2,"pitch":"C3"},
+            {"beat":2,"pitch":"G3"},
+            {"beat":2,"pitch":"E3"},
+            {"beat":2,"pitch":"G3"},
+            
+            {"beat":2,"pitch":"B3"},
+            {"beat":2,"pitch":"G4"},
+            {"beat":2,"pitch":"D3"},
+            {"beat":2,"pitch":"G4"},
+
+
+           {"beat":2,"pitch":"C3"},
             {"beat":2,"pitch":"G3"},
             {"beat":2,"pitch":"E3"},
             {"beat":2,"pitch":"G3"},

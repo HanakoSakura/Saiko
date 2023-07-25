@@ -67,15 +67,19 @@ def synthesis(score:dict)->list[int]:
         else :
             Voice = VOICE_LIBRARY.get(Voice)
         
-        
-        freq = note.get('pitch')
-        if freq==None :
-            freq = 1000.0
-        if type(freq)==str :
-            freq = 440*(2**(pitch.PITCH[freq]/12))
-            
-        if note.get('freq') != None:
-            freq = note.get('freq')
+        if note.get('pitchs') != None:
+            freqs = []
+            for a in note.get('pitchs'):
+                freqs.append(440*(2**(pitch.PITCH[a]/12)))
+        else:
+            freq = note.get('pitch')
+            if freq==None :
+                freq = 1000.0
+            if type(freq)==str :
+                freq = 440*(2**(pitch.PITCH[freq]/12))
+
+            if note.get('freq') != None:
+                freq = note.get('freq')
         
         vol = note.get('vol')
         if vol==None:
@@ -84,17 +88,25 @@ def synthesis(score:dict)->list[int]:
         delay = note.get('beat')
         if delay==None:
             delay = 1
-        
-        # Start Magic
-        track += VOICE.VOICE(
-            Voice,freq,delay*useBeat,vol,ENVELOP.ENVELOP['test1']
-        )
-        
+            
+        if note.get('pitchs') != None:
+            note_maked = [0]*delay*useBeat
+            for f in freqs:
+                tmp = VOICE.VOICE(Voice,f,delay*useBeat,vol,ENVELOP.ENVELOP['test1'])
+                for j in range(delay*useBeat):
+                    note_maked[j]+=tmp[j]
+            track+=note_maked
+        else:
+            # Start Magic
+            track += VOICE.VOICE(
+                Voice,freq,delay*useBeat,vol,ENVELOP.ENVELOP['test1']
+            )
         i+=1
         p = int(i/len(useScore)*100)
         print('\rSynthesis',end=' |')
         print('#'*p,end='')
-        print('_'*(100-p)+'|',i,'/',len(useScore),end='   ')
+        print('_'*(100-p),end='| ')
+        print(i,'/',len(useScore),end='   ')
     print()
     return track,len(useScore)
 
