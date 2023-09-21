@@ -30,13 +30,24 @@ VOICE_LIBRARY = {
         1.0:0.8+0.0j,
         2.0:0.1+0.0j,
         4.0:0.0+0.0j
+    },
+    'GT2' : {
+        1.:0.6j,
+        2.:0.2j,
+        4.:0.1j,
+        8.:0.1j
+    },
+    'GT3' : {
+        1.:0.6j,
+        2.:0.3j,
+        4.:0.15j
     }
     
 }
 
 from . import VOICE,ENVELOP,OUTPUT,pitch
 
-def synthesis(score:dict)->list[int]:
+def synthesis(score:dict):
     '''SAIKO Synthesis Main Magic'''
     global VOICE_LIBRARY
     
@@ -95,6 +106,8 @@ def synthesis(score:dict)->list[int]:
                 tmp = VOICE.VOICE(Voice,f,delay*useBeat,vol,ENVELOP.ENVELOP['test1'])
                 for j in range(delay*useBeat):
                     note_maked[j]+=tmp[j]
+            for j in range(delay*useBeat):
+                note_maked[j] = int(note_maked[j]/len(freqs))
             track+=note_maked
         else:
             # Start Magic

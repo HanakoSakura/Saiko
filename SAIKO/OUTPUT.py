@@ -1,7 +1,7 @@
 import ctypes
 import wave
 
-def OUTPUT(file_name:str,w:list[int]):
+def OUTPUT(file_name:str,w):
         f =wave.open(file_name,'wb')
         f.setnchannels(1)
         f.setsampwidth(2)
